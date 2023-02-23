@@ -9,6 +9,23 @@ export const WeatherInfoIcons = {
   pressure: '/icon/pressure.svg',
 };
 
+export const WeatherIcons = {
+  '01d': '/icon/sunny.svg',
+  '01n': '/icon/night.svg',
+  '02d': '/icon/day.svg',
+  '02n': '/icon/cloudy-night.svg',
+  '03d': '/icon/cloudy.svg',
+  '03n': '/icon/cloudy.svg',
+  '04d': '/icon/perfect-day.svg',
+  '04n': '/icon/cloudy-night.svg',
+  '09d': '/icon/rain.svg',
+  '09n': '/icon/rain-night.svg',
+  '10d': '/icon/rain.svg',
+  '10n': '/icon/rain-night.svg',
+  '11d': '/icon/storm.svg',
+  '11n': '/icon/storm.svg',
+};
+
 const WeatherCondition = styled.div`
  display: flex;
  flex-direction: row;
@@ -100,7 +117,8 @@ const WeatherComponent = (props) => {
     <>
       <WeatherCondition>
         <Condition>
-          <span>30℃</span> | Cloudy
+          <span>{`${Math.floor(weather?.main?.temp - 273)}℃`}</span>
+          {` | ${weather?.weather[0].description}`}
         </Condition>
         <WeatherLogo src="/icon/perfect-day.svg" />
       </WeatherCondition>
