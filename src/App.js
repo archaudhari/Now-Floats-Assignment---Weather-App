@@ -44,8 +44,7 @@ function App() {
       ) : (
         <CityComponent updateCity={updateCity} fetchWeather={fetchWeather} />
       )}
-{/* <WeatherComponent weather={weather} /> */}
-
+      {/* <WeatherComponent weather={weather} /> */}
     </Container>
   );
 }
