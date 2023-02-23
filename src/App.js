@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.css';
 import styled from 'styled-components';
 import CityComponent from './modules/CityComponent';
@@ -24,11 +24,15 @@ font-weight: bold;
 `;
 
 function App() {
+  const [city, updateCity] = useState();
+  const [weather, updateWeather] = useState();
+
+  const fetchWeather = () => {};
   return (
     <Container>
       <AppLabel>React Weather App</AppLabel>
-      {/* <CityComponent /> */}
-      <WeatherComponent/>
+      <CityComponent updateCity="updateCity" fetchWeather="fetchWeather" />
+      {/* <WeatherComponent/> */}
     </Container>
   );
 }

@@ -1,6 +1,14 @@
 import styled from 'styled-components';
 import React from 'react';
 
+export const WeatherInfoIcons = {
+  sunset: '/icon/temp.svg',
+  sunrise: '/icon/temp.svg',
+  humidity: '/icon/humidity.svg',
+  wind: '/icon/wind.svg',
+  pressure: '/icon/pressure.svg',
+};
+
 const WeatherCondition = styled.div`
  display: flex;
  flex-direction: row;
@@ -66,11 +74,15 @@ margin: 15px;
 }
 `;
 
-const WeatherInfoComponent = () => {
+const WeatherInfoComponent = (props) => {
+  const { name, value } = props;
   return (
     <InfoContainer>
-      <InfoIcon />
-      <InfoLabel></InfoLabel>
+      <InfoIcon src={WeatherInfoIcons[name]} />
+      <InfoLabel>
+        {value}
+        <span>name</span>
+      </InfoLabel>
     </InfoContainer>
   );
 };
@@ -87,10 +99,10 @@ const WeatherComponent = () => {
       <Location>London, GB</Location>
       <WeatherInfoLabel>Weather Info</WeatherInfoLabel>
       <WeatherInfoContainer>
-        <WeatherInfoComponent />
-        <WeatherInfoComponent />
-        <WeatherInfoComponent />
-        <WeatherInfoComponent />
+        <WeatherInfoComponent name="sunrise" value="2332" />
+        <WeatherInfoComponent name="humidity" value="432" />
+        <WeatherInfoComponent name="wind" value="423" />
+        <WeatherInfoComponent name="pressure" value="42432" />
       </WeatherInfoContainer>
     </>
   );
