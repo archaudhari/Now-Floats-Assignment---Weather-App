@@ -87,7 +87,8 @@ const WeatherInfoComponent = (props) => {
   );
 };
 
-const WeatherComponent = () => {
+const WeatherComponent = (props) => {
+  const {weather} = props;
   return (
     <>
       <WeatherCondition>
@@ -96,7 +97,7 @@ const WeatherComponent = () => {
         </Condition>
         <WeatherLogo src="/icon/perfect-day.svg" />
       </WeatherCondition>
-      <Location>London, GB</Location>
+      <Location>`${weather?.name}, ${weather?.sys?.country}`</Location>
       <WeatherInfoLabel>Weather Info</WeatherInfoLabel>
       <WeatherInfoContainer>
         <WeatherInfoComponent name="sunrise" value="2332" />

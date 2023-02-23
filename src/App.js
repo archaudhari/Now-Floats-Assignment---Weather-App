@@ -40,11 +40,12 @@ function App() {
     <Container>
       <AppLabel>React Weather App</AppLabel>
       {weather ? (
-        <WeatherComponent />
+        <WeatherComponent weather={weather} />
       ) : (
         <CityComponent updateCity={updateCity} fetchWeather={fetchWeather} />
       )}
-      {/* <WeatherComponent/> */}
+{/* <WeatherComponent weather={weather} /> */}
+
     </Container>
   );
 }
