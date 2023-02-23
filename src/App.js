@@ -26,7 +26,8 @@ font-weight: bold;
 function App() {
   return (
     <Container>
-      <AppLabel>React Weather App</AppLabel>{' '}
+      <AppLabel>React Weather App</AppLabel>
+      <CityComponent />
     </Container>
   );
 }
