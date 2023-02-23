@@ -3,6 +3,7 @@ import './style.css';
 import styled from 'styled-components';
 import CityComponent from './modules/CityComponent';
 import WeatherComponent from './modules/WeatherInfoComponent';
+import axios from 'axios';
 
 const API_KEY = 'b94ac897d3f376c4535bbff3c38bca1c';
 
