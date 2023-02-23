@@ -34,12 +34,16 @@ function App() {
     const response = await axios.get(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
     );
-    console.log(response);
+    updateWeather(response.data);
   };
   return (
     <Container>
       <AppLabel>React Weather App</AppLabel>
-      <CityComponent updateCity={updateCity} fetchWeather={fetchWeather} />
+      {weather ? (
+        <WeatherComponent />
+      ) : (
+        <CityComponent updateCity={updateCity} fetchWeather={fetchWeather} />
+      )}
       {/* <WeatherComponent/> */}
     </Container>
   );
