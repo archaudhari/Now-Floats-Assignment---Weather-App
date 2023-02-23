@@ -120,7 +120,7 @@ const WeatherComponent = (props) => {
           <span>{`${Math.floor(weather?.main?.temp - 273)}℃`}</span>
           {` | ${weather?.weather[0].description}`}
         </Condition>
-        <WeatherLogo src="/icon/perfect-day.svg" />
+        <WeatherLogo src={WeatherIcons[weather?.weather[0].icon]} />
       </WeatherCondition>
       <Location>
         `${weather?.name}, ${weather?.sys?.country}`
