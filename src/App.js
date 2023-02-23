@@ -27,7 +27,8 @@ function App() {
   return (
     <Container>
       <AppLabel>React Weather App</AppLabel>
-      <CityComponent />
+      {/* <CityComponent /> */}
+      <WeatherComponent/>
     </Container>
   );
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import WeatherComponent from './modules/WeatherInfoComponent';
 import React from 'react';
 
 const WeatherLogo = styled.img`
@@ -37,6 +38,7 @@ margin: 20px auto;
   border: none;
   outline: none;
   font-weight: bold;
+  cursor: pointer;
 }
 `;
 
