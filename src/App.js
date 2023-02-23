@@ -29,17 +29,17 @@ function App() {
   const [city, updateCity] = useState();
   const [weather, updateWeather] = useState();
 
-  const fetchWeather = async () => {
+  const fetchWeather = async (e) => {
     e.preventDefault();
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
     );
     console.log(response);
   };
   return (
     <Container>
       <AppLabel>React Weather App</AppLabel>
-      <CityComponent updateCity="updateCity" fetchWeather="fetchWeather" />
+      <CityComponent updateCity={updateCity} fetchWeather={fetchWeather} />
       {/* <WeatherComponent/> */}
     </Container>
   );
