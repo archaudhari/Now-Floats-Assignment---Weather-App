@@ -20,6 +20,7 @@ border-radius: 2px;
 color: black;
 font-size: 18px;
 margin: 20px auto;
+
 & input{
   padding: 10px;
   font-size: 14px;
@@ -27,9 +28,12 @@ margin: 20px auto;
   outline: none;
   font-weight: bold;
 }
+
 & button{
   padding: 10px;
   font-size: 14px;
+  color: white;
+  background-color: black; 
   border: none;
   outline: none;
   font-weight: bold;
