@@ -30,10 +30,11 @@ function App() {
   const [weather, updateWeather] = useState();
 
   const fetchWeather = async () => {
+    e.preventDefault();
     const response = await axios.get(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API_KEY}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${City}&appid=${API_KEY}`
     );
-    console.response(response);
+    console.log(response);
   };
   return (
     <Container>
