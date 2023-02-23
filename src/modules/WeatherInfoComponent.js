@@ -88,7 +88,8 @@ const WeatherInfoComponent = (props) => {
 };
 
 const WeatherComponent = (props) => {
-  const {weather} = props;
+  const { weather } = props;
+  const isDay = weather?.weather[0].icon?.includes('d');
   return (
     <>
       <WeatherCondition>
@@ -97,13 +98,15 @@ const WeatherComponent = (props) => {
         </Condition>
         <WeatherLogo src="/icon/perfect-day.svg" />
       </WeatherCondition>
-      <Location>`${weather?.name}, ${weather?.sys?.country}`</Location>
+      <Location>
+        `${weather?.name}, ${weather?.sys?.country}`
+      </Location>
       <WeatherInfoLabel>Weather Info</WeatherInfoLabel>
       <WeatherInfoContainer>
         <WeatherInfoComponent name="sunrise" value="2332" />
-        <WeatherInfoComponent name="humidity" value="432" />
-        <WeatherInfoComponent name="wind" value="423" />
-        <WeatherInfoComponent name="pressure" value="42432" />
+        <WeatherInfoComponent name="humidity" value={weather?.main?.humidity} />
+        <WeatherInfoComponent name="wind" value={weather?.wind?.speed} />
+        <WeatherInfoComponent name="pressure" value={weather?.main?.pressure} />
       </WeatherInfoContainer>
     </>
   );
