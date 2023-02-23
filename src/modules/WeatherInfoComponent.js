@@ -87,10 +87,10 @@ const WeatherComponent = () => {
       <Location>London, GB</Location>
       <WeatherInfoLabel>Weather Info</WeatherInfoLabel>
       <WeatherInfoContainer>
-        <WeatherInfoContainer />
-        <WeatherInfoContainer />
-        <WeatherInfoContainer />
-        <WeatherInfoContainer />
+        <WeatherInfoComponent />
+        <WeatherInfoComponent />
+        <WeatherInfoComponent />
+        <WeatherInfoComponent />
       </WeatherInfoContainer>
     </>
   );
