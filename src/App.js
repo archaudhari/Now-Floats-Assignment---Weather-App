@@ -1,6 +1,8 @@
 import React from 'react';
 import './style.css';
 import styled from 'styled-components';
+import CityComponent from './modules/CityComponent';
+import WeatherComponent from './modules/WeatherInfoComponent';
 
 const Container = styled.div`
 display: flex;
@@ -14,14 +16,6 @@ width: 380px;
 background: white;
 font-family: Montserrat;
 `;
-const CityComponent = styled.div`
-display: flex;
-flex-direction: column;
-`;
-const WeatherComponent = styled.div`
-display: flex;
-flex-direction: column;
-`;
 
 const AppLabel = styled.span`
 color: black;
@@ -29,13 +23,10 @@ font-size: 18px;
 font-weight: bold;
 `;
 
-
 function App() {
   return (
     <Container>
-      <AppLabel>React Weather App</AppLabel>
-      <CityComponent>CityComponent</CityComponent>
-      <WeatherComponent>WeatherComponent</WeatherComponent>
+      <AppLabel>React Weather App</AppLabel>{' '}
     </Container>
   );
 }
